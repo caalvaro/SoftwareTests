@@ -66,3 +66,27 @@ M5: N = 1000
 Característica: Algum cliente chega em zero ou nenhum cliente chega em zero
 
 Característica: Algum cliente espera 10 ou nenhum cliente espera 10
+
+NC1 →  C = 1
+
+NC2 → 2 ≤ e C ≤ 5
+
+NC3 → 6 ≤ C ≤ 9
+
+NC4 → C = 10
+
+NN1 →  N = 1
+
+NN2→  2 ≤ N ≤ 500
+
+NN3 → 501 ≤ N ≤ 999
+
+NN4 → N = 1000
+
+T0   “Para todo cliente o tempo de chegada é zero” 
+
+T1 → “Existe algum cliente tal que T ≠ 0”
+
+D9 → “Para todo cliente o tempo de serviço é diferente de 10 ”
+
+D10 → “Existe algum cliente tal que o tempo de serviço é igual a 10”.
