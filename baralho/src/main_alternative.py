@@ -28,15 +28,3 @@ def baralho1(entrada):
         if len(valor) == 1:
             valor = "0" + valor
     return [copas, espadas, ouros, paus]
-
-
-def main():
-    entrada = input()
-    resultado = baralho1(entrada)
-    print(resultado[0])
-    print(resultado[1])
-    print(resultado[2])
-    print(resultado[3])
-
-
-main()
