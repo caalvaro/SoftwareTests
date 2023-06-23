@@ -1,7 +1,7 @@
 import sys
 
 sys.path.append("..\\baralho\\src")
-from main import baralho2
+from main_alternative import baralho1
 import pytest
 
 
@@ -19,5 +19,5 @@ import pytest
     ],
 )
 def test_invalid(input, expected_result):
-    actual = baralho2(input)
+    actual = baralho1(input)
     assert actual == expected_result
