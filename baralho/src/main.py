@@ -1,15 +1,22 @@
-def baralho2(entrada):
-    cartas = {"C": [], "E": [], "U": [], "P": []}
+def baralho1(entrada):
+    cartas = []
     for i in range(0, len(entrada), 3):
-        chave = entrada[i + 2]
-        cartas[chave] = cartas[chave] + [int(entrada[i : i + 2])]
+        cartas = cartas + [entrada[i : i + 3]]
 
-    faltam = {"C": 13, "E": 13, "U": 13, "P": 13}
-    for naipe in ["C", "E", "U", "P"]:
-        for valor in range(1, 14):
-            qtd = cartas[naipe].count(valor)
-            if qtd > 1:
-                faltam[naipe] = "erro"
-            elif qtd == 1 and faltam[naipe] != "erro":
-                faltam[naipe] -= 1
-    return [faltam["C"], faltam["E"], faltam["U"], faltam["P"]]
+    cartas.sort()
+
+    naipes = {"C": 13, "E": 13, "U": 13, "P": 13}
+
+    i = 0
+    for valor in range(1, 14):
+        while i < len(cartas) and int(cartas[i][:2]) == valor:
+            naipe = cartas[i][2]
+            naipes[naipe] -= 1
+            i = i + 1
+
+    for i in range(1, len(cartas)):
+        if cartas[i - 1] == cartas[i]:
+            naipe = cartas[i][2]
+            naipes[naipe] = "erro"
+
+    return list(naipes.values())

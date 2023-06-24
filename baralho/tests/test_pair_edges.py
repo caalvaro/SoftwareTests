@@ -1,7 +1,7 @@
 import sys
 
 sys.path.append("..\\baralho\\src")
-from main_alternative import baralho1
+from main import baralho1
 import pytest
 
 
